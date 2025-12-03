@@ -240,12 +240,22 @@
         desc = "当前文件诊断";
       };
     }
+
     {
       action = "<cmd>Telescope diagnostics<cr>";
       key = "<leader>cW";
       options = {
         silent = true;
         desc = "全局诊断";
+      };
+    }
+
+    {
+      action = "<cmd>lua vim.diagnostic.open_float()<cr>";
+      key = "<leader>d";
+      options = {
+        silent = true;
+        desc = "显示诊断信息 (浮窗)";
       };
     }
   ];

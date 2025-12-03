@@ -41,13 +41,23 @@
         }
         {
           action = {
-            __raw = "function(path) vim.cmd('Telescope find_files') end";
+            __raw = "function(path) vim.cmd('Telescope find_files theme=dropdown previewer=false layout_config={height=0.3}') end";
           };
           group = "Label";
           icon = " ";
           desc = "Find   ";
           icon_hl = "@variable";
           key = "f";
+        }
+        {
+          action = {
+            __raw = "function(path) vim.cmd('Telescope projects layout_config={height=0.8}') end";
+          };
+          group = "Label";
+          icon = " ";
+          desc = "Project   ";
+          icon_hl = "@variable";
+          key = "p";
         }
         {
           action = {

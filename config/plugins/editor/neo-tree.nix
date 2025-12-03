@@ -7,7 +7,6 @@
   plugins.neo-tree.settings = {
     enable = true;
     add_blank_line_at_top = false;
-
     filesystem = {
       bind_to_cwd = false;
       follow_current_file = {
@@ -53,8 +52,9 @@
     {
       mode = ["n"];
       key = "<leader>e";
-      action = "<cmd>Neotree toggle<cr>";
+      action = "<cmd>Neotree toggle reveal_force_cwd<cr>";
       options = {
+        silent = true;
         desc = "Open/Close Neotree";
       };
     }

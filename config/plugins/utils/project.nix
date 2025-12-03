@@ -3,7 +3,7 @@
     enable = true;
     lazyLoad = {
       enable = true;
-      settings.event = "BufRead";
+      settings.event = "User CookLazy";
     };
     # enableTelescope = true;
     settings = {
@@ -20,6 +20,7 @@
         "Cargo.toml"
         ".project-root"
       ];
+      auto_cd = true;
     };
   };
 }

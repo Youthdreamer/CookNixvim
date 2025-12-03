@@ -44,7 +44,7 @@
 
   keymaps = [
     {
-      action = "<CMD>Telescope projects<CR>";
+      action = "<CMD>Telescope projects layout_config={height=0.8}<CR>";
       key = "<leader>fp";
       options = {
         silent = true;

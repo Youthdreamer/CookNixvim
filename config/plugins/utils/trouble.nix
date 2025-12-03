@@ -3,8 +3,17 @@
   plugins.trouble.lazyLoad = {
     settings.cmd = "Trouble";
   };
-  #TODO: 未配置好快捷键，还不知道用途
   keymaps = [
+    #打开/关闭TODO查询面板
+    {
+      action = "<cmd>Trouble diagnostics toggle<cr>";
+      key = "<leader>xt";
+      options = {
+        silent = true;
+        desc = "切换TODO面板 (Trouble)";
+      };
+    }
+
     #打开/关闭诊断面板
     {
       action = "<cmd>Trouble diagnostics toggle<cr>";

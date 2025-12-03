@@ -23,6 +23,20 @@
       }
 
       {
+        __unkeyed-1 = "<leader>g";
+        group = "Git";
+        icon = "";
+        mode = "n";
+      }
+
+      {
+        __unkeyed-1 = "<leader>t";
+        group = "终端操作";
+        icon = "";
+        mode = "n";
+      }
+
+      {
         __unkeyed-1 = "<leader>m";
         group = "文件标记跳转";
         icon = "󰃀";
@@ -30,7 +44,7 @@
       }
 
       {
-        __unkeyed-1 = "<leader>t";
+        __unkeyed-1 = "<leader>T";
         group = "TODO查找";
         icon = "";
         mode = "n";
@@ -43,12 +57,12 @@
         mode = "n";
       }
 
-      {
-        __unkeyed-1 = "<leader>p";
-        group = "Pick查找";
-        icon = "󰈞";
-        mode = "n";
-      }
+      # {
+      #   __unkeyed-1 = "<leader>p";
+      #   group = "Pick查找";
+      #   icon = "󰈞";
+      #   mode = "n";
+      # }
 
       {
         __unkeyed-1 = "<leader>w";
@@ -82,6 +96,20 @@
         __unkeyed-1 = "<leader>H";
         group = "帮助查询";
         icon = "";
+        mode = "n";
+      }
+
+      {
+        __unkeyed-1 = "<leader>d";
+        group = "诊断浮窗";
+        icon = "";
+        mode = "n";
+      }
+
+      {
+        __unkeyed-1 = "<leader>x";
+        group = "问题查看";
+        icon = "";
         mode = "n";
       }
 

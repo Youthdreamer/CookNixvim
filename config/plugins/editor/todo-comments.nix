@@ -10,8 +10,8 @@
 
   keymaps = [
     {
-      action = "<CMD>Telescope todo-comments todo<CR>";
-      key = "<leader>tt";
+      action = "<CMD>Telescope todo-comments todo theme=dropdown previewer=false<CR>";
+      key = "<leader>T";
       options = {
         silent = true;
         desc = "Todo 查询";
