@@ -5,6 +5,7 @@
     ./utils
     ./lsp
     ./git
+    ./snippets
   ];
 
   colorschemes.gruvbox.enable = true;

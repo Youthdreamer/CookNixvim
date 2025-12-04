@@ -2,7 +2,7 @@
   plugins.noice.enable = true;
   plugins.noice.lazyLoad = {
     settings = {
-      event = ["DeferredUIEnter"];
+      event = ["User CookLazy"];
     };
   };
   plugins.notify = {
@@ -14,7 +14,8 @@
   };
   plugins.notify.lazyLoad = {
     settings = {
-      event = ["DeferredUIEnter"];
+      # event = ["DeferredUIEnter"];
+      event = ["User CookLazy"];
     };
   };
   plugins.noice.settings = {

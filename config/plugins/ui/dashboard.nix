@@ -1,11 +1,10 @@
 {
   plugins.dashboard.enable = true;
-  # plugins.dashboard.lazyLoad = {
-  #   settings = {
-  #     # event = ["VimEnter"];
-  #     lazy = false;
-  #   };
-  # };
+  plugins.dashboard.lazyLoad = {
+    settings = {
+      event = ["VimEnter"];
+    };
+  };
   plugins.dashboard.settings = {
     change_to_vcs_root = true;
     theme = "doom";
@@ -74,18 +73,4 @@
       # };
     };
   };
-
-  # autoCmd = [
-  #   {
-  #     desc = "取消自动换行注释";
-  #     event = "VimEnter";
-  #     callback = {
-  #       __raw = ''
-  #         function()
-  #           require('dashboard')
-  #         end
-  #       '';
-  #     };
-  #   }
-  # ];
 }

@@ -4,6 +4,7 @@
     inlayHints = true;
   };
   plugins.lsp.lazyLoad = {
+    enable = true;
     settings = {
       event = ["FileType"];
     };

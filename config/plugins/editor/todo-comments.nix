@@ -10,7 +10,7 @@
 
   keymaps = [
     {
-      action = "<CMD>Telescope todo-comments todo theme=dropdown previewer=false<CR>";
+      action = "<CMD>Telescope todo-comments todo theme=dropdown<CR>";
       key = "<leader>T";
       options = {
         silent = true;

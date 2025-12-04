@@ -3,7 +3,7 @@
   plugins.bufferline.lazyLoad = {
     enable = true;
     settings = {
-      event = ["VimEnter"];
+      event = ["User LazyFile"];
     };
   };
   plugins.bufferline.settings = {
