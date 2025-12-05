@@ -24,7 +24,7 @@
     user_commands = true;
     lazy_load = false;
     user_default_options = {
-      names = true; # 启用 CSS 颜色名称（如 red、blue）
+      names = false; # 启用 CSS 颜色名称（如 red、blue）
       # 名称处理选项
       names_opts = {
         lowercase = true; # 高亮小写颜色名
@@ -55,7 +55,7 @@
       # 启用 xterm256 颜色支持
       xterm = false;
       # 高亮显示模式
-      mode = "background"; # 背景色高亮
+      mode = "virtualtext"; # 背景色高亮
       # 使用 virtualtext 时显示的方块字符
       virtualtext = "■";
       # 虚拟文本显示位置

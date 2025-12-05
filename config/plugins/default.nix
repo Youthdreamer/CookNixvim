@@ -6,16 +6,12 @@
     ./lsp
     ./git
     ./snippets
+    ./colorschemes
   ];
 
-  #TODO: 试着还原一下主题选择功能
-  colorschemes.gruvbox.enable = true;
-  colorschemes.gruvbox.lazyLoad = {
-    enable = true;
-    settings = {
-      event = ["User Cooklazy"];
-    };
-  };
+  extraConfigLua = ''
+    require("features.switch-theme").setup()
+  '';
 
   plugins = {
     lz-n.enable = true;
@@ -24,13 +20,6 @@
       enable = true;
       settings = {
         event = ["User CookLazy"];
-      };
-    };
-    nvim-autopairs.enable = true;
-    nvim-autopairs.lazyLoad = {
-      enable = true;
-      settings = {
-        event = ["InsertEnter"];
       };
     };
   };

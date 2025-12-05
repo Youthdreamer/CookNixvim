@@ -17,7 +17,7 @@
       mode = "n";
       action.__raw = ''
         function()
-          local ok, _ = pcall(require, "mini-files")
+          local ok, _ = pcall(require, "mini.files")
           if not ok then
             vim.notify(
               "mini-files 未加载，请检查插件是否启用",

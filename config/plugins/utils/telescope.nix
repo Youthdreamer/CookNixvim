@@ -44,7 +44,7 @@
 
   keymaps = [
     {
-      action = "<CMD>Telescope projects layout_config={height=0.8}<CR>";
+      action = "<CMD>Telescope projects layout_config={height=0.6,width=0.6}<CR>";
       key = "<leader>fp";
       options = {
         silent = true;
@@ -84,7 +84,7 @@
       };
     }
     {
-      action = "<CMD>Telescope oldfiles theme=dropdown previewer=false<CR>";
+      action = "<CMD>Telescope oldfiles theme=dropdown previewer=false layout_config={height=0.3}<CR>";
       key = "<leader>fo";
       options = {
         silent = true;
@@ -100,7 +100,7 @@
       };
     }
     {
-      action = "<CMD>Telescope keymaps<CR>";
+      action = "<CMD>Telescope keymaps layout_config={width=0.8}<CR>";
       key = "<leader>fk";
       options = {
         silent = true;
@@ -108,7 +108,7 @@
       };
     }
     {
-      action = "<CMD>Telescope help_tags<CR>";
+      action = "<CMD>Telescope help_tags theme=ivy layout_config={height=0.4}<CR>";
       key = "<leader>H";
       options = {
         silent = true;

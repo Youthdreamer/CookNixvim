@@ -49,7 +49,7 @@
         }
         {
           action = {
-            __raw = "function(path) vim.cmd('Telescope projects layout_config={height=0.8}') end";
+            __raw = "function(path) vim.cmd('Telescope projects layout_config={height=0.6,width=0.6}') end";
           };
           group = "Label";
           icon = " ";

@@ -25,7 +25,7 @@
           vim.cmd("Telescope todo-comments todo theme=dropdown")
         end
       '';
-      key = "<leader>T";
+      key = "<leader>ft";
       options = {
         silent = true;
         desc = "Todo 查询";

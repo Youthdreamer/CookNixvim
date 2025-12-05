@@ -87,6 +87,20 @@
     }
 
     {
+      desc = "在neovim退出前，关闭掉一些会话恢复会出问题的窗口";
+      event = "VimLeavePre";
+      callback = {
+        __raw = ''
+          function()
+              pcall(vim.cmd, "Neotree close")
+              pcall(vim.cmd, "AerialClose")
+              pcall(vim.cmd, "Trouble close")
+          end
+        '';
+      };
+    }
+
+    {
       desc = "自定义事件CookLazy";
       event = "VimEnter";
       once = true;

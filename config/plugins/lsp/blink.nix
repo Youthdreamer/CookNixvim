@@ -13,10 +13,10 @@
   };
   plugins.blink-cmp.settings.keymap = {
     preset = "super-tab";
-    "<CR>" = [
-      "accept"
-      "fallback"
-    ];
+    # "<CR>" = [
+    #   "accept"
+    #   "fallback"
+    # ];
   };
 
   plugins.blink-cmp.settings.completion = {

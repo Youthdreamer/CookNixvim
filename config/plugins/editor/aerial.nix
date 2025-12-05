@@ -24,6 +24,7 @@
       ];
     };
     layout = {
+      position = "right";
       width = 30;
       min_width = 15;
     };

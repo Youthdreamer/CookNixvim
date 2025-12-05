@@ -6,7 +6,7 @@
   keymaps = [
     #打开/关闭TODO查询面板
     {
-      action = "<cmd>TodoTrouble<cr>";
+      action = "<cmd>TodoTrouble toggle<cr>";
       key = "<leader>xt";
       options = {
         silent = true;

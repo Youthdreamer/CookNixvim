@@ -45,8 +45,8 @@
 
       {
         __unkeyed-1 = "<leader>T";
-        group = "TODO查找";
-        icon = "";
+        group = "主题切换";
+        icon = "";
         mode = "n";
       }
 

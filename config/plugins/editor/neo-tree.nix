@@ -2,9 +2,17 @@
   plugins.neo-tree.enable = true;
   plugins.neo-tree.lazyLoad = {
     enable = true;
-    settings.cmd = "Neotree";
+    settings = {
+      cmd = "Neotree";
+    };
   };
   plugins.neo-tree.settings = {
+    window = {
+      width = 30;
+      mappings = {
+        "<space>" = "none";
+      };
+    };
     enable = true;
     add_blank_line_at_top = false;
     filesystem = {
@@ -36,13 +44,6 @@
           staged = "󰩍 "; # 已暂存
           ignored = "  "; # 忽略
           conflict = " "; # 冲突（更醒目）
-        };
-      };
-
-      window = {
-        width = 20;
-        mappings = {
-          "<space>" = "none";
         };
       };
     };
