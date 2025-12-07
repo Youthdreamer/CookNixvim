@@ -4,9 +4,11 @@
     ./ui
     ./utils
     ./lsp
+    ./dap
     ./git
     ./snippets
     ./colorschemes
+    ./dependencies
   ];
 
   plugins = {

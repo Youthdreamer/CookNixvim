@@ -253,7 +253,7 @@
 
     {
       action = "<cmd>lua vim.diagnostic.open_float()<cr>";
-      key = "<leader>d";
+      key = "<leader>D";
       options = {
         silent = true;
         desc = "显示诊断信息 (浮窗)";

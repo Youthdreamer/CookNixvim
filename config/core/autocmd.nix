@@ -120,9 +120,14 @@
       callback = {
         __raw = ''
           function()
-              pcall(vim.cmd, "Neotree close")
-              pcall(vim.cmd, "AerialClose")
-              pcall(vim.cmd, "Trouble close")
+            pcall(vim.cmd, "Neotree close")
+            pcall(vim.cmd, "AerialClose")
+            pcall(vim.cmd, "Trouble close")
+
+            local ok, dapui = pcall(require, "dapui")
+            if ok then
+              dapui.close()  -- 关闭所有 dap-ui 窗口
+            end
           end
         '';
       };

@@ -21,6 +21,28 @@
         icon = "";
         mode = "n";
       }
+      # 调试
+      {
+        __unkeyed-1 = "<leader>d";
+        group = "调试";
+        icon = "";
+        mode = "n";
+      }
+      {
+        __unkeyed-1 = "<leader>dc";
+        desc = "启动 / 继续调试";
+        icon = "▶ ";
+      }
+      {
+        __unkeyed-1 = "<leader>db";
+        desc = "切换断点";
+        icon = "● ";
+      }
+      {
+        __unkeyed-1 = "<leader>dx";
+        desc = "终止调试";
+        icon = "■ ";
+      }
 
       {
         __unkeyed-1 = "<leader>g";
@@ -56,13 +78,6 @@
         icon = "";
         mode = "n";
       }
-
-      # {
-      #   __unkeyed-1 = "<leader>p";
-      #   group = "Pick查找";
-      #   icon = "󰈞";
-      #   mode = "n";
-      # }
 
       {
         __unkeyed-1 = "<leader>w";
@@ -100,7 +115,7 @@
       }
 
       {
-        __unkeyed-1 = "<leader>d";
+        __unkeyed-1 = "<leader>D";
         group = "诊断浮窗";
         icon = "";
         mode = "n";

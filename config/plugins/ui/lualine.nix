@@ -2,7 +2,7 @@
   plugins.lualine.enable = true;
   plugins.lualine.lazyLoad = {
     settings = {
-      event = ["BufReadPost"];
+      event = ["User LazyFile"];
     };
   };
   plugins.lualine.settings = {
@@ -13,14 +13,18 @@
           "alpha"
           "starter"
           "neo-tree"
+          "mini-files"
+          "dap-repl"
         ]; # 禁用 statusline 的文件类型
         winbar = [
           "aerial"
           "dap-repl"
           "neotest-summary"
         ]; # 禁用 winbar 的文件类型
-        globalstatus = true;
       };
+      section_separators = "";
+      component_separators = "";
+      globalstatus = true;
     };
   };
 
@@ -53,6 +57,22 @@
         '';
       }
       "encoding"
+      {
+        __raw = ''
+          function()
+            local f = vim.bo.fileformat
+            if f == "unix" then
+              return "LF"
+            elseif f == "dos" then
+              return "CRLF"
+            elseif f == "mac" then
+              return "CR"
+            else
+              return f
+            end
+          end
+        '';
+      }
       "fileformat"
       "filetype"
     ];
