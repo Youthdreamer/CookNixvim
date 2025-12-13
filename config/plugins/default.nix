@@ -2,10 +2,10 @@
   imports = [
     ./editor
     ./ui
-    ./ai
-    ./utils
     ./lsp
+    ./utils
     ./dap
+    ./ai
     ./git
     ./snippets
     ./colorschemes

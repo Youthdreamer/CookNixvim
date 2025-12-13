@@ -29,17 +29,15 @@
       # 解决 rustc 依赖警告
       installRustc = true;
       settings = {
-        rust_analyzer = {
-          check = {
-            command = "clippy";
-            onSave = true;
-          };
-          inlayHints = {
-            enable = true;
-            typeHints.enable = true;
-            parameterHints.enable = true;
-            chainingHints.enable = true;
-          };
+        check = {
+          command = "clippy";
+          onSave = true;
+        };
+        inlayHints = {
+          enable = true;
+          typeHints.enable = true;
+          parameterHints.enable = true;
+          chainingHints.enable = true;
         };
       };
     };
@@ -68,6 +66,9 @@
     # lua 语言服务器
     lua_ls = {
       enable = true;
+      settings = {
+        diagnostics.globals = ["vim"];
+      };
     };
     # go 语言服务器
     gopls = {

@@ -1,14 +1,17 @@
 {
-  plugins.telescope = {
+  plugins.telescope.enable = true;
+  plugins.telescope.lazyLoad = {
     enable = true;
-    lazyLoad.settings.event = "User LazyFile";
-    # lazyLoad.settings.cmd = "Telescope"; # telescope的配置无法加载
+    settings = {
+      event = ["User LazyFile"];
+    };
   };
   #  插件Telescope的插件
   plugins.telescope.extensions = {
     # ui-select = {
     #   enable = true;
     # };
+
     fzf-native = {
       enable = true;
     };

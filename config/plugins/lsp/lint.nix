@@ -1,20 +1,28 @@
 {pkgs, ...}: {
   extraPackages = [
     pkgs.eslint_d
-    pkgs.eslint
   ];
   plugins.lint.enable = true;
+  plugins.lint.lazyLoad = {
+    enable = true;
+    settings = {
+      event = ["User CookLazy"];
+    };
+  };
   plugins.lint.lintersByFt = {
     javascript = ["eslint_d"];
     typescript = ["eslint_d"];
     javascriptreact = ["eslint_d"];
     typescriptreact = ["eslint_d"];
   };
-  extraConfigLua = ''
-    vim.api.nvim_create_autocmd({"BufEnter", "BufWritePost", "InsertLeave"}, {
-      callback = function()
-        require("lint").try_lint()
-      end,
-    })
-  '';
+  plugins.lint.autoCmd = {
+    event = ["BufWritePost" "InsertLeave"];
+    callback = {
+      __raw = ''
+        function()
+          require('lint').try_lint()
+        end
+      '';
+    };
+  };
 }

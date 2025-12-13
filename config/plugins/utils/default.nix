@@ -1,9 +1,9 @@
 {
   imports = [
-    ./flash.nix
     ./telescope.nix
-    ./toggleterm.nix
+    ./flash.nix
     ./which-key.nix
+    ./toggleterm.nix
     ./project.nix
     ./harpoon.nix
     ./trouble.nix

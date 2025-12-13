@@ -1,4 +1,4 @@
-# NOTE: 这个首页极大的拉低了加载的速度,关掉能提升不少，但是关掉就不好看了。
+# NOTE: 这个首页极大的拉低了加载的速度,关掉能大幅提升，但是关掉就不好看了。
 # NOTE:保持优雅!!!
 {
   plugins.dashboard.enable = true;
@@ -7,7 +7,8 @@
       enabled.__raw = ''
         function()
           return vim.fn.argc() == 0
-        end'';
+        end
+      '';
     };
   };
   plugins.dashboard.settings = {
@@ -63,7 +64,17 @@
         }
         {
           action = {
-            __raw = "function(path) require('persistence').load() end";
+            __raw = ''
+              function(path)
+                -- require('persistence').load()
+                local ok, _ = pcall(require, "persistence")
+                if not ok then
+                  vim.notify("persistence 未准备完毕", vim.log.levels.WARN, { title = "Todo" })
+                  return nil
+                end
+                return require('persistence').load()
+              end
+            '';
           };
           group = "Label";
           icon = "󰒲 ";

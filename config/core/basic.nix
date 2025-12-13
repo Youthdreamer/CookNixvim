@@ -4,6 +4,23 @@
     register = "unnamedplus";
     providers.wl-copy.enable = true;
   };
+
+  # NOTE: 开启这个配置，使得支持osc52的终端能够在ssh链接使用该neovim时可以将neovim的内容复制到系统剪切板中
+  # 支持osc52的终端 Windows Terminal, kitty, wezterm, iTerm2, alacritty等
+  extraConfigLua = ''
+    vim.g.clipboard = {
+      name = 'OSC 52',
+        copy = {
+          ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+          ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+        },
+        paste = {
+          ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+          ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+        },
+      }
+  '';
+
   opts = {
     # --- 行号 ---
     number = true; # 显示行号
