@@ -1,10 +1,11 @@
 {
   extraConfigLua = ''
     if vim.g.neovide then
+      vim.opt.clipboard = "unnamedplus"
       -- neovide的基础配置文件Basic.lua
       vim.opt.linespace = 2 -- 行距2
       -- 光标动画
-      vim.g.neovide_cursor_vfx_mode = { "pixiedust", "ripple" }
+      vim.g.neovide_cursor_vfx_mode = "pixiedust"
       -- 缩放
       vim.g.neovide_scale_factor = 1.0
       -- 支持框线绘制方式（修复字符边框断裂问题）
