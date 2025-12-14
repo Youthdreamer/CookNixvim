@@ -7,6 +7,9 @@
 - core/  
   编辑器的基础配置（选项、快捷键、自动命令等）
 
+- neovide/
+  neovide的简单配置（光标动画，ui缩放快捷键）
+
 - plugins/  
   按功能划分的插件模块（LSP、DAP、UI、AI 等）
 

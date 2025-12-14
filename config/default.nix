@@ -2,7 +2,9 @@
   imports = [
     ./core
     ./plugins
+    ./neovide
   ];
+
   enableMan = true;
   enablePrintInit = true;
   # Lua 字节码预编译（bytecode 编译）加速功能（默认不开启）
