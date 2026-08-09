@@ -146,7 +146,7 @@ Neovide 专用配置
    <summary><strong>插件列表详情</strong></summary>
 
 - ai
-  AI 相关插件，用于代码辅助与对话式编辑
+  AI 相关插件，用于代码辅助与对话式编辑 **(默认不开启)**
   - **[avante](./config/plugins/ai/avante.nix)**: 基于大模型的代码助手，支持对话、修改与生成代码
   - **[blink-cmp-avante](./config/plugins/ai/blink-cmp-avante.nix)**: 将 Avante 能力接入补全系统，提供 AI 辅助补全体验
 - **[colorschemes/](./config/plugins/colorschemes/)**: 统一管理并切换多款第三方配色主题
@@ -346,6 +346,9 @@ Neovide 专用配置
 > [!NOTE]
 > ！！！重点推荐查看的 `NOTE` 在 [`obsess.nix`](./config/plugins/github/obsess.nix) 下，明确说明如何安装 `Nixvim` 官方不支持的 `Github` 上的 `Neovim` 插件，可对照该文件代码编写。
 > `obsess.nix` 文件安装的 `obsess` 插件为我个人开发的 `neovim` 插件，个人使用，并非适合大多数人。
+
+> [!WARNING]
+> ai 插件默认关闭，打开请看文件内说明，同时应该在 `blink` 插件配置中打开对应的 ai 辅助插件的配置代码。
 
 ## Github Actions 说明
 

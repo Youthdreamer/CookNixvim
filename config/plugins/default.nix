@@ -5,7 +5,7 @@
     ./lsp
     ./utils
     ./dap
-    ./ai
+    # ./ai # 默认不导入ai插件，如果需要ai插件请在将此注释打开
     ./git
     ./snippets
     ./colorschemes
