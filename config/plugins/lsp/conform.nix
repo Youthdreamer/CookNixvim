@@ -65,11 +65,11 @@
       };
       toml = ["taplo"];
       yaml = ["yamlfmt"];
-      markdown = {
-        __unkeyed-1 = "prettierd";
-        __unkeyed-2 = "prettier";
-        stop_after_first = true;
-      };
+      # markdown = {
+      #   __unkeyed-1 = "prettierd";
+      #   __unkeyed-2 = "prettier";
+      #   stop_after_first = true;
+      # };
       json = ["prettierd"];
       bash = ["shfmt"];
       typst = ["typstyle"];
