@@ -11,7 +11,6 @@
     kanagawa-nvim
     monokai-pro-nvim
     onedark-nvim
-    poimandres-nvim
     nightfox-nvim
     nord-nvim
     rose-pine

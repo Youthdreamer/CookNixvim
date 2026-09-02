@@ -25,9 +25,6 @@ M.colorschemes = {
 	-- onedark-nvim主题
 	["onedark"] = { style = "dark" },
 
-	-- poimandres主题
-	["poimandres"] = {},
-
 	-- gtihub主题
 	["github_dark"] = {},
 	["github_dark_dimmed"] = {},

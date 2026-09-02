@@ -142,6 +142,12 @@
         icon = "";
         mode = "n";
       }
+      {
+        __unkeyed-1 = "<leader>u";
+        group = "Undotree";
+        icon = "󰕌";
+        mode = "n";
+      }
     ];
   };
 }

@@ -220,5 +220,19 @@
         desc = "切换到上一个标签页";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>uu";
+      action.__raw = ''
+        function()
+          vim.cmd([[packadd nvim.undotree]])
+          require('undotree').open()
+        end
+      '';
+      options = {
+        silent = true;
+        desc = "Undotree";
+      };
+    }
   ];
 }

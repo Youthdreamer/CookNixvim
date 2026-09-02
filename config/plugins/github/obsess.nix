@@ -3,7 +3,7 @@
 # 这是我编写的插件obsess，地址：https://github.com/Youthdreamer/obsess
 # 它提供了一个简单的倒计时定时器和任务管理功能，所有内容显示在一个浮动窗口中
 # 如果你不需要可以更换为其他GitHub插件或者删除该文件("which-key.nix"与"autocmd.nix"中的相关设置也应该删除)
-# 该插件，使用neovim提供的api不依赖其他插件，因为功能简单所以我没有编写太多的人性化服务与防呆设计所以该插件能用但不是很好用。
+# 该插件，使用neovim提供的api不依赖其他插件。
 {pkgs, ...}: {
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
@@ -11,25 +11,23 @@
       src = pkgs.fetchFromGitHub {
         owner = "Youthdreamer";
         repo = "obsess";
-        rev = "054eeac470f6f0e82994ead7d6903c9f76bc18fa";
-        hash = "sha256-5wiVDKu+fv6qsRKjDZ195bG1qJq5Ys5/WPZNKYh/wTc=";
+        rev = "8c0a79d611b328f55f506806cdfbae5c972b7bbc";
+        hash = "sha256-5dibZ0VNUmKvH8peby5JiT+aLKAsJ9J83cYrU0VmA2k=";
       };
     })
   ];
   extraConfigLua = ''
     local opts = {
-      position = "center",
+      position = "top-right",
       window = {
-        width  = 60,
-        height = 15,
-        border = "rounded",
-        style = "minimal",
+        width  = 30,
+        height = 10,
         title  = "Obsess",
       },
       -- 倒计时结束后的弹窗提醒设置
       flash = {
-        times = 6,         -- 闪烁次数
-        interval_ms = 300, -- 每次间隔时间
+        times = 10,         -- 闪烁次数
+        interval_ms = 200, -- 每次间隔时间
       },
     }
     -- 懒加载
@@ -39,6 +37,7 @@
         cmd = {
           "ObsessToggle", "ObsessClose", "ObsessTimer", "ObsessTimerSec",
           "ObsessTaskAdd", "ObsessTaskClear", "ObsessTaskDel", "ObsessTaskDone",
+          "ObsessTaskLoad"
         },
         after = function()
           require("obsess").setup(opts)
@@ -51,25 +50,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>os";
-      action = "<cmd>ObsessToggle<cr>";
-      options = {
-        silent = true;
-        desc = "切换窗口";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>oc";
-      action = "<cmd>ObsessClose<cr>";
-      options = {
-        silent = true;
-        desc = "注销";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>oo";
+      key = "<leader>ot";
       action = "<cmd>ObsessTimer<cr>";
       options = {
         silent = true;
@@ -78,11 +59,29 @@
     }
     {
       mode = "n";
-      key = "<leader>ol";
+      key = "<leader>os";
       action = "<cmd>ObsessTimerSec<cr>";
       options = {
         silent = true;
         desc = "设置定时器(秒)";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ow";
+      action = "<cmd>ObsessToggle<cr>";
+      options = {
+        silent = true;
+        desc = "显示/隐藏窗口";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>oc";
+      action = "<cmd>ObsessClose<cr>";
+      options = {
+        silent = true;
+        desc = "关闭窗口并停止计时";
       };
     }
     {
@@ -96,7 +95,7 @@
     }
     {
       mode = "n";
-      key = "<leader>ot";
+      key = "<leader>ox";
       action = "<cmd>ObsessTaskDone<cr>";
       options = {
         silent = true;
@@ -119,6 +118,15 @@
       options = {
         silent = true;
         desc = "清空任务列表";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ol";
+      action = "<cmd>ObsessTaskLoad<cr>";
+      options = {
+        silent = true;
+        desc = "加载任务面板";
       };
     }
   ];
